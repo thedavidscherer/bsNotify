@@ -60,7 +60,24 @@ $(function(){
 
 ```
 
-### Ex 3 - Append to collection
+### Ex 3 - Disable Animation (fade)
+
+```javascript
+
+$(function(){
+    
+    $('#errorDiv').bsNotify({
+        type: 'error',
+        code: 'Error 404',
+        message: 'Page Not Found',
+        animate: false
+    });
+
+});
+
+```
+
+### Ex 4 - Append to collection
 
 Override the default behavior and place the alert at the bottom of the container.
 
@@ -79,7 +96,7 @@ $(function(){
 
 ```
 
-### Ex 4 - Add to some other element
+### Ex 5 - Add to some other element
 
 Instead of appending/prepending to `#errorDiv`, insert the alert into another element, like `body`
 
@@ -98,7 +115,7 @@ $(function(){
 
 ```
 
-### Ex 5 - Custom error types and classes
+### Ex 6 - Custom error types and classes
 
 Normally an alert looks like
 
