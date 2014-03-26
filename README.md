@@ -128,7 +128,7 @@ $(function(){
 
 # Customized Bootstrap
 
-This plugin was written to be resilient to customized versions of Bootstrap, though I'm sure there are edge cases. You may need to tweak this plugin to suit those instances where you have very heavily modified bootstrap beyone renamming classes and/or changing some colors. I can't help you with this.
+This plugin was written to be resilient to customized versions of Bootstrap, though I'm sure there are edge cases. You may need to tweak this plugin to suit those instances where you have very heavily modified bootstrap beyond renamming classes and/or changing some colors. I can't help you with this.
 
 If you have customized your copy of Bootstrap at all, and are experiencing issues, try testing the plugin with a Vanilla copy of Bootstrap.
 
