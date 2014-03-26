@@ -7,8 +7,9 @@
             code: '',
             message: '',
             prepend: true, 
-            attachTo: this,
             dismissable: true,
+            animate: true,
+            attachTo: this,
             typeClasses: {
                 success: 'alert-success',
                 info: 'alert-info',
@@ -31,6 +32,10 @@
                 })
                 .html('&times;')
                 .appendTo(notice);
+            
+            if(settings.animate) {
+                notice.addClass('fade in');
+            }
 
         }
 
