@@ -24,6 +24,7 @@
     "homepage": "https://github.com/thedavidscherer/bsNotify",
     "docs": "https://github.com/thedavidscherer/bsNotify",
     "dependencies": {
-        "jquery": ">= 1.9.0"
+        "jquery": ">= 1.9.0",
+        "bootstrap": ">= 3.0.0"
     }
 }

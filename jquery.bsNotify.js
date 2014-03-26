@@ -1,43 +1,38 @@
 (function ( $ ) {
 
-    $.fn.notify = function(options) {
+    $.fn.bsNotify = function(options) {
 
         var settings = $.extend({
             type: 'error',
             code: '',
             message: '',
             prepend: true, 
-            attachTo: this
+            attachTo: this,
+            dismissable: true,
+            typeClasses: {
+                success: 'alert-success',
+                info: 'alert-info',
+                warning: 'alert-warning',
+                error: 'alert-danger'
+            }
         }, options);
 
-        var alertClass;
+        notice = $('<div/>').addClass('alert ' + settings.typeClasses[settings.type]);
 
-        switch(settings.type) {
-            case 'success': 
-                alertClass = 'alert-success';
-                break;
-            case 'info': 
-                alertClass = 'alert-info';
-                break;
-            case 'warning': 
-                alertClass = 'alert-warning';
-                break;
-            default:
-            case 'error':
-                alertClass = 'alert-danger';
-                break;
-        }
+        if(settings.dismissable) {
 
-        notice = $('<div/>').addClass('alert ' + alertClass + ' alert-dismissable');
+            notice.addClass('alert-dismissable');
         
-        $('<button/>').addClass('close')
-            .data('dismiss', 'alert')
-            .attr({
-                type: 'button',
-                'aria-hidden': true,
-                'data-dismiss': 'alert',
-            })
-            .html('&times;').appendTo(notice);
+            $('<button/>').addClass('close')
+                .attr({
+                    type: 'button',
+                    'aria-hidden': true,
+                    'data-dismiss': 'alert'
+                })
+                .html('&times;')
+                .appendTo(notice);
+
+        }
 
         $('<strong/>').html(settings.code).appendTo(notice);
 
