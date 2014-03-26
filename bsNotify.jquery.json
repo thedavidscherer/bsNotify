@@ -1,0 +1,29 @@
+{
+    "name": "bsNotify",
+    "title": "jQuery Bootstrap Notify",
+    "description": "jQuery plugin to create Bootstrap 3.x alerts.",
+    "keywords": [
+        "Bootstrap",
+        "notice",
+        "alert",
+        "alerts"
+    ],
+    "version": "0.1.0",
+    "author": {
+        "name": "David Scherer",
+        "email": "scherer.david.h@gmail.com",
+        "url": "http://davidscherer.blogspot.com"
+    },
+    "licenses": [
+        {
+            "type": "GPL-2.0",
+            "url": "https://github.com/thedavidscherer/bsNotify/blob/0.1.0/LICENSE"
+        }
+    ],
+    "bugs": "https://github.com/thedavidscherer/bsNotify/issues",
+    "homepage": "https://github.com/thedavidscherer/bsNotify",
+    "docs": "https://github.com/thedavidscherer/bsNotify",
+    "dependencies": {
+        "jquery": ">= 1.9.0"
+    }
+}
