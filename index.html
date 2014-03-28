@@ -1,1 +1,324 @@
-My GitHub Page
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+        <title>Bootstrap 3 Notifications</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+        <style type="text/css">
+            .my-custom-class {
+                background-color: #f2deff;
+                border-color: #ebbcdc;
+                color: #f34342;
+            }
+        </style>
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body data-spy="scroll" data-target="#sideBar">
+
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="https://github.com/thedavidscherer/bsNotify">bsNotify</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="https://github.com/thedavidscherer/bsNotify/releases/latest">Download</a></li>
+                        <li><a href="https://github.com/thedavidscherer/bsNotify/issues">Support</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-lg-3" id="sideBar">
+                    <ul class="nav nav-pills nav-stacked" data-spy="affix">
+                        <li class="active"><a href="#bsNotify">bsNotify</a></li>
+                        <li><a href="#Options">Options</a></li>
+                        <li><a href="#typeClasses">&mdash; typeClasses</a></li>
+                        <li><a href="#Examples">Examples</a></li>
+                        <li><a href="#StandardUsage">&mdash; Standard Usage</a></li>
+                        <li><a href="#DisableDismissable">&mdash; Disable Dismissable</a></li>
+                        <li><a href="#DisableAnimation">&mdash; Disable Animation (fade)</a></li>
+                        <li><a href="#Appendtocollection">&mdash; Append to collection</a></li>
+                        <li><a href="#Addtosomeotherelement">&mdash; Add to some other element</a></li>
+                        <li><a href="#Customerrortypesandclasses">&mdash; Custom error types and classes</a></li>
+                        <li><a href="#CustomizedBootstrap">Customized Bootstrap</a></li>
+                        <li><a href="#Bootstrap2">Bootstrap 2</a></li>
+                        <li><a href="#License">License</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-9">
+                    
+                        <h1 id="bsNotify">bsNotify</h1>
+                        <p>bsNotify is a configurable interface for working with Boostrap 3 alerts for jQuery. The alert syntax from http://getbootstrap.com/components/#alerts is fully implemented.</p>
+
+                        <h2 id="Options">Options</h2>
+                        <table class="table table table-striped table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Default</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td><code>error</code></td>
+                                    <td>An error type. Each type has a corresponding Botstrap `alert-*className*` defined in `typeClasses`. This can be completely overridden with your own values and mappings.</td>
+                                </tr>
+                                <tr>
+                                    <td>code</td>
+                                    <td><strong>none</strong></td>
+                                    <td>This is displayed in **Bold** in the alert</td>
+                                </tr>
+                                <tr>
+                                    <td>message</td>
+                                    <td><strong>none</strong></td>
+                                    <td>The message for this alert</td>
+                                </tr>
+                                <tr>
+                                    <td>prepend</td>
+                                    <td><code>true</code></td>
+                                    <td>Whether or not to prepend to the collection it was called on, default is to prepend. If you want to append, set this to false</td>
+                                </tr>
+                                <tr>
+                                    <td>attachTo</td>
+                                    <td><code>collection</code></td>
+                                    <td>Where the alert will be placed, by default this is the collection bsNotify was called on, you can pass a jQuery object, selector, or any other input valid for `$(...)`</td>
+                                </tr>
+                                <tr>
+                                    <td>dismissable</td>
+                                    <td><code>true</code></td>
+                                    <td>Whether or not to add the `.alert-dismissable` class and close button</td>
+                                </tr>
+                                <tr>
+                                    <td>typeClasses</td>
+                                    <td><code>hash</code></td>
+                                    <td>A hash that maps the types you plan to use in `type` to a Boostrap `alert-*className*`. This can be completely overridden with your own values and mappings.</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+
+                        <h3 id="typeClasses">typeClasses</h3>
+                        <table class="table table-striped table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Class</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>success</td>
+                                    <td><code>alert-success</code></td>
+                                </tr>
+                                <tr>
+                                    <td>info</td>
+                                    <td><code>alert-info</code></td>
+                                </tr>
+                                <tr>
+                                    <td>warning</td>
+                                    <td><code>alert-warning</code></td>
+                                </tr>
+                                <tr>
+                                    <td>error</td>
+                                    <td><code>alert-danger</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 id="Examples">Examples</h2>
+
+                        <h3 id="StandardUsage">Standard Usage</h3>
+<pre>
+    <code>
+
+$(function(){
+    
+    $('#errorDiv').bsNotify({
+        type: 'error',
+        code: 'Error 404',
+        message: 'Page Not Found'
+    });
+
+});
+
+    </code>
+</pre>
+
+                        <h3 id="DisableDismissable">Disable Dismissable</h3>
+<pre>
+    <code>
+
+$(function(){
+    
+    $('#errorDiv').bsNotify({
+        type: 'error',
+        code: 'Error 404',
+        message: 'Page Not Found',
+        dismissable: false
+    });
+
+});
+
+    </code>
+</pre>
+
+
+                        <h3 id="DisableAnimation">Disable Animation (fade)</h3>
+<pre>
+    <code>
+
+$(function(){
+    
+    $('#errorDiv').bsNotify({
+        type: 'error',
+        code: 'Error 404',
+        message: 'Page Not Found',
+        animate: false
+    });
+
+});
+
+    </code>
+</pre>
+
+
+                        <h3 id="Appendtocollection">Append to collection</h3>
+Override the default behavior and place the alert at the bottom of the container.
+
+<pre>
+    <code>
+
+$(function(){
+    
+    $('#errorDiv').bsNotify({
+        type: 'error',
+        code: 'Error 404',
+        message: 'Page Not Found',
+        prepend: false
+    });
+
+});
+
+    </code>
+</pre>
+
+
+                        <h3 id="Addtosomeotherelement">Add to some other element</h3>
+<pre>
+    <code>
+
+$(function(){
+    
+    $('#errorDiv').bsNotify({
+        type: 'error',
+        code: 'Error 404',
+        message: 'Page Not Found',
+        attachTo: 'body' // can be any valid jQuery selector
+    });
+
+});
+
+    </code>
+</pre>
+
+
+                        <h3 id="Customerrortypesandclasses">Custom error types and classes</h3>
+
+                        Normally an alert looks like:
+
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <strong>Woah!</strong> You're not looking so good. Try again.
+                        </div>
+
+                        The example below would produce something like the following
+
+                        <div class="alert my-custom-class alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <strong>Woah!</strong> An alert with custom style-mappings and/or error type.
+                        </div>
+
+<pre>
+    <code>
+
+$(function(){
+    
+    $('#errorDiv').bsNotify({
+        type: 'type1',
+        code: 'Error 404',
+        message: 'Page Not Found',
+        typeClasses: {
+            type1: 'my-custom-class',
+            type2: 'another-custom-class'
+        }
+    });
+
+});
+
+    </code>
+</pre>
+
+
+                        <h2 id="CustomizedBootstrap">Customized Bootstrap</h2>
+                        <p>This plugin was written to be resilient to customized versions of Bootstrap, though I'm sure there are edge cases. You may need to tweak this plugin to suit those instances where you have very heavily modified bootstrap beyond renamming classes and/or changing some colors. I can't help you with this.</p>
+
+                        <p>If you have customized your copy of Bootstrap at all, and are experiencing issues, try testing the plugin with a Vanilla copy of Bootstrap.</p>
+
+
+                        <h2 id="Bootstrap2">Bootstrap 2</h2>
+                        <p>The alerts in Bootstrap 2 are fairly similar to those in Bootstrap 3, however there is no gurantee this plugin is perfectly backwards compatible as the two versions of Bootstrap are not compatible. While it is certainly possible to re-write or modify the plugin to support Bootstrap 2, I cannot do this for you. I also encourage you to move to Bootstrap 3, it's nicer.</p>
+
+
+                        <h2 id="License">License</h2>
+                        <p>Copyright 2014 David Scherer</P>
+
+                        <p>Licensed under the GPL 2.0 License. <a href="http://opensource.org/licenses/GPL-2.0">http://opensource.org/licenses/GPL-2.0</a></p>
+
+
+                </div>
+
+            </div>
+
+
+        </div><!-- /.container -->
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
