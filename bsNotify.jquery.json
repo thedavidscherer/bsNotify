@@ -8,7 +8,7 @@
         "alert",
         "alerts"
     ],
-    "version": "0.1.1",
+    "version": "0.1.2",
     "author": {
         "name": "David Scherer",
         "email": "scherer.david.h@gmail.com",
@@ -17,12 +17,12 @@
     "licenses": [
         {
             "type": "GPL-2.0",
-            "url": "https://github.com/thedavidscherer/bsNotify/blob/0.1.0/LICENSE"
+            "url": "https://github.com/thedavidscherer/bsNotify/blob/0.1.2/LICENSE"
         }
     ],
     "bugs": "https://github.com/thedavidscherer/bsNotify/issues",
-    "homepage": "https://github.com/thedavidscherer/bsNotify",
-    "docs": "https://github.com/thedavidscherer/bsNotify",
+    "homepage": "http://thedavidscherer.github.io/bsNotify/",
+    "docs": "http://thedavidscherer.github.io/bsNotify/",
     "dependencies": {
         "jquery": ">= 1.9.0",
         "bootstrap": ">= 3.0.0"
